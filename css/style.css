@@ -1,0 +1,162 @@
+/* Import de la police Google Font */
+@import url('https://fonts.googleapis.com/css?family=Barlow:100,300,400,500,600,700,800,900|Ramabhadra&display=swap');
+
+/* 
+Reset
+*/
+    /* Création de variables */
+    :root{
+        --main-color: #4b2637;
+        --min-marge: 1rem;
+        --med-marge: 2rem;
+        --max-marge: 4rem;
+    }
+
+    /* Sélectionner toutes les balises */
+    *{
+        /* Supprimer toutes les marges */
+        margin: 0;
+        padding: 0;
+
+        /* Intégrer les BORDER et les PADDING dans la taille des balises */
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /* Passer d'une base 16 à une base 10 */
+    html{
+        font-size: 62.5%; /* => 1rem = 10px */
+    }
+
+body{
+    background-color: #e9e3e3;
+}
+
+body, h1 span{
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.1;
+    text-align: center;
+    margin: 1em;
+}
+
+h1, h2{
+    font-family: 'Ramabhadra', sans-serif;
+    font-weight: 900;
+}
+
+h1 span {
+    font-size: .5em;
+    display: block;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Les images de doivent pas dépasser leur parent */
+img{
+    max-width: 100%;
+}
+
+/* ---------------------- APPLICATION SHELL ---------------------- */
+header, footer{
+    color: #e9e3e3;
+    padding: var(--med-marge);
+    background-color: var(--main-color);
+    position: fixed;
+    left: 0;
+    width: 100%;
+}
+
+header{
+    padding: var(--max-marge);
+    top: 0;
+}
+
+nav ul{
+    height: 0;
+    overflow: hidden;
+
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+nav ul.open{
+    height: 13.1rem;
+}
+
+nav button {
+    font-size: 2rem;
+    background: #e9e3e3;
+    color: var(--main-color);
+    width: 4rem;
+    height: 4rem;
+    border: .2rem solid var(--main-color);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: calc(100% - 2rem);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+nav button.open{
+    color: #e9e3e3;
+    border-color: #e9e3e3;
+    background-color: var(--main-color);
+
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+nav li{
+    list-style: none;
+    margin-bottom: var(--min-marge);
+}
+
+nav a{
+    display: block;
+    color: var(--main-color);
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    padding: var(--min-marge);
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+nav a:hover{
+    color: var(--main-color);
+    background-color: white;
+}
+
+/* ---------------------- MAIN ---------------------- */
+main{
+    height: 100vh;
+    padding: 20rem var(--med-marge) 8rem var(--med-marge);
+    overflow: auto;
+}
+
+/* ---------------------- FOOTER ---------------------- */
+
+footer{
+    font-size: 1rem;
+    text-transform: uppercase;
+    bottom: 0;
+}
